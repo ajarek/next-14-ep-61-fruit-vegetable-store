@@ -1,0 +1,143 @@
+[
+  {
+    "id": 1,
+    "name": "Apple",
+    "price": 1.99,
+    "Image": "https://images.pexels.com/photos/2487443/pexels-photo-2487443.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 2,
+    "name": "Banana",
+    "price": 0.99,
+    "Image": "https://images.pexels.com/photos/2316466/pexels-photo-2316466.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 3,
+    "name": "Orange",
+    "price": 2.99,
+    "Image": "https://images.pexels.com/photos/2084239/pexels-photo-2084239.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 4,
+    "name": "Mango",
+    "price": 3.99,
+    "Image": "https://images.pexels.com/photos/5946084/pexels-photo-5946084.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 5,
+    "name": "Pineapple",
+    "price": 4.99,
+    "Image": "https://images.pexels.com/photos/3091592/pexels-photo-3091592.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+      },
+  {
+    "id": 6,
+    "name": "Watermelon",
+    "price": 5.99,
+    "Image": "https://images.pexels.com/photos/59830/melons-water-melons-fruit-green-59830.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 7,
+    "name": "Grapes",
+    "price": 6.99,
+    "Image": "https://images.pexels.com/photos/708777/pexels-photo-708777.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 8,
+    "name": "Strawberry",
+    "price": 7.99,
+    "Image": "https://images.pexels.com/photos/46174/strawberries-berries-fruit-freshness-46174.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 9,
+    "name": "Blueberry",
+    "price": 8.99,
+    "Image": "https://images.pexels.com/photos/2539170/pexels-photo-2539170.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },
+  {
+    "id": 10,
+    "name": "Raspberry",
+    "price": 9.99,
+    "Image": "https://images.pexels.com/photos/59999/raspberries-fruits-fruit-berries-59999.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"fruit"
+  },   
+  {
+    "id": 11,
+    "name": "Carrot",
+    "price": 0.99,
+    "Image": "https://images.pexels.com/photos/54082/carrots-vegetables-food-orange-54082.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 12,
+    "name": "Tomato",
+    "price": 2.99,
+    "Image": "https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 13,
+    "name": "Potato",
+    "price": 0.99,
+    "Image": "https://images.pexels.com/photos/4110476/pexels-photo-4110476.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 14,
+    "name": "Onion",
+    "price": 1.49,
+    "Image": "https://images.pexels.com/photos/533342/pexels-photo-533342.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 15,
+    "name": "Garlic",
+    "price": 3.99,
+    "Image": "https://images.pexels.com/photos/1638522/pexels-photo-1638522.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 16,
+    "name": "Cabbage",
+    "price": 2.99,
+    "Image": "https://images.pexels.com/photos/2518893/pexels-photo-2518893.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 17,
+    "name": "Lettuce",
+    "price": 2.99,
+    "Image": "https://images.pexels.com/photos/1199562/pexels-photo-1199562.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 18,
+    "name": "Cucumber",
+    "price": 1.99,
+    "Image": "https://images.pexels.com/photos/28867060/pexels-photo-28867060/free-photo-of-zblizenie-swiezych-zielonych-ogorkow-w-swietle-slonecznym.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  {
+    "id": 19,
+    "name": "Broccoli",
+    "price": 2.49,
+    "Image": "https://images.pexels.com/photos/1634356/pexels-photo-1634356.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  },   
+  
+  {
+    "id": 20,
+    "name": "Zucchini",
+    "price": 2.99,
+    "Image": "https://images.pexels.com/photos/3375263/pexels-photo-3375263.jpeg?auto=compress&cs=tinysrgb&w=180&h=120&dpr=2",
+    "type":"vegetable"
+  }
+]
