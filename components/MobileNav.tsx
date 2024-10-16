@@ -5,8 +5,7 @@ import Link from 'next/link'
 import {
   Sheet,
   SheetContent,
-  SheetTrigger,
-  SheetHeader,
+  SheetTrigger
 } from '@/components/ui/sheet'
 
 import { useCartStore } from '@/store/cartStore'
@@ -24,7 +23,7 @@ const MobileNav = () => {
       >
      
         <div className='flex flex-col gap-4 mt-4 '>
-          {items.length >= 0 && (
+          {items.length > 0 && (
             <Link
               href='/cart'
               className={`flex items-center  px-3 rounded-sm `}
@@ -39,12 +38,7 @@ const MobileNav = () => {
             </Link>
           )}
              
-          <Link
-            href='/all-categories'
-            className='relative  max-sm-gap-1'
-          >
-            <h1 className='text-xl hover:text-primary focus:text-primary '>All Categories</h1>
-          </Link>
+         
         
           <Link
             href='/'

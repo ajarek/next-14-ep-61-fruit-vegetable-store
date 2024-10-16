@@ -9,16 +9,8 @@ import { useCartStore } from '@/store/cartStore'
 const Links = () => {
   const { items } = useCartStore()
   return (
-    <div className='max-lg:hidden w-full flex items-center justify-between   '>
-      <Link
-        href='/all-categories'
-        className='relative  max-sm-gap-1'
-      >
-       
-        <h1 className=' text-xl  hover:text-primary focus:text-primary '>
-         All Categories
-        </h1>
-      </Link>
+    <div className='max-lg:hidden w-full flex items-center justify-end   '>
+      
 
       <div className='flex items-center gap-8 mr-4 '>
         <Link
@@ -56,7 +48,7 @@ const Links = () => {
        
        
 
-        {items.length >= 0 && (
+        {items.length > 0 && (
           <Link
             href='/cart'
             className={`flex items-center  px-3 rounded-sm `}

@@ -1,12 +1,13 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 
-type Item = {
+export type Item = {
   id: number
   name: string
-  current_price: number
+  price: number
   quantity: number
-  image: string
+  Image: string
+  type: string
 }
 
 type ItemState = {
@@ -39,7 +40,7 @@ export const useCartStore = create<ItemState>()(
 
       total: () =>
         get().items.reduce(
-          (acc, item) => acc + item.current_price * item.quantity,
+          (acc, item) => acc + item.price * item.quantity,
           0
         ),
       removeAll: () => set({ items: [] }),
