@@ -1,11 +1,11 @@
 import Links from '@/components/Links'
 import MobileNav from './MobileNav'
 import { ModeToggle } from '@/components/ModeToggle'
-import { Apple, PhoneCall, Search } from 'lucide-react'
-import { Input } from './ui/input'
-import { Button } from './ui/button'
+import { Apple,  PhoneCall } from 'lucide-react'
+import SearchProduct from './SearchProduct'
 
 const Navbar = async () => {
+  
   return (
     <div className=' flex flex-col justify-start items-center   px-16 max-sm:px-2  '>
       <div className='h-12 w-full flex justify-between items-center '>
@@ -13,12 +13,7 @@ const Navbar = async () => {
           <Apple size={28}/>
           GreenShop
         </h1>
-        <div className='flex items-center '>
-        <Input placeholder='Search' className='rounded-r-none' />
-        <Button className='rounded-l-none '>
-          <Search />
-        </Button>
-        </div>
+        <SearchProduct />
         <div className='flex items-center gap-2'>
         <PhoneCall size={28} className='text-primary max-sm:hidden' />   
           <h2 className='text-xl font-bold text-primary max-sm:hidden'>(+48)573219230</h2>

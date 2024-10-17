@@ -61,7 +61,7 @@ const Cart = () => {
               Delete All
             </Button>
             <Button onClick={() => router.push('/payment')} aria-label='go to payment'>
-              I buy Cryptocurrencies
+              I buy Products
             </Button>
           </div>
         </>

@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
 import { MoveRight } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
             <p className='text-xl '>Sale up to</p>
             <p className='text-xl'>50% of</p>
           </div>
-          <Button variant='outline' className='w-fit flex items-center gap-2' >Shop Now <MoveRight /></Button>
+          <Link href={'/shop?search='}  className='w-fit flex items-center gap-2 bg-background hover:bg-background/70 px-4 py-2 rounded-lg' >Shop Now <MoveRight /></Link>
         </div>
         <div className=''>
           <Image
@@ -38,7 +38,7 @@ export default function Home() {
           />
           <div className='absolute top-1 left-1 text-xl' >100% Fresh Fruit</div>
           <div className='absolute top-8 left-1 text-2xl bg-black text-white p-2 rounded-lg ' >75% Off</div>
-          <div className='absolute bottom-1 right-2 text-xl underline' >Shop Now</div>
+          <Link href={'/shop?search='}  className=' absolute bottom-2 right-2 text-xl border-b-2 border-white hover:border-violet-500  ' >Shop Now</Link>
         </div>
         <div className='relative max-sm:min-h-[250px]  flex justify-center items-center w-full h-full bg-primary rounded-lg'>
           <Image
@@ -49,7 +49,7 @@ export default function Home() {
           />
           <div className='absolute top-1 left-1 text-xl' >100% Fresh Vegetables</div>
           <div className='absolute top-8 left-1 text-2xl bg-black text-white p-2 rounded-lg ' >82% Off</div>
-          <div className='absolute bottom-1 right-2 text-xl underline' >Shop Now</div>
+          <Link href={'/shop?search='}  className='absolute bottom-2 right-2 text-xl border-b-2 border-white hover:border-violet-400 ' >Shop Now</Link>
         </div>
       </div>
     </div>

@@ -48,7 +48,7 @@ const MobileNav = () => {
           </Link>
 
           <Link
-            href='/shop'
+            href='/shop?search='
             className={`  text-xl hover:text-primary focus:text-primary `}
           >
             Shop

@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import type { Item } from '@/store/cartStore'
 import { useCartStore } from '@/store/cartStore'
-const Shop = () => {
+const Shop = ({searchParams}:{searchParams:{search:string}}) => {
   const { addItemToCart, items } = useCartStore()
   const [quantityPanel, setQuantityPanel] = useState<{ [key: number]: number }>({})
   const router = useRouter()
@@ -40,8 +40,10 @@ const Shop = () => {
   }
 
   return (
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-12 pb-8'>
-      {Products.map((product) => (
+    <div className='grid xl:grid-cols-4 grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-4 px-12 pb-8'>
+      {Products
+      .filter((product) => product.name.toLowerCase().includes(searchParams.search.toLowerCase() ||  '')) 
+      .map((product) => (
         <Card
           key={product.id}
           className='overflow-hidden'
@@ -58,7 +60,7 @@ const Shop = () => {
             <CardTitle>{product.name}</CardTitle>
             <CardDescription>{product.type}</CardDescription>
             <p>${product.price}</p>
-            <div className='flex items-center gap-2 '>
+            <div className='w-full flex items-center gap-2 '>
               <Button
                 size={'icon'}
                 className='bg-transparent rounded-full'
@@ -86,7 +88,7 @@ const Shop = () => {
               id: Number(product?.id) || 0,
               name: product?.name || '',
               price: product?.price || 0,
-              quantity: quantityPanel[product.id] || 0,
+              quantity: quantityPanel[product.id] || 1,
               Image: product?.Image || '',
               type:product?.type || '',
             })
