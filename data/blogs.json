@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Fruit Processing: Jams and Preserves",
+    "description": "Discover how to make delicious jams and preserves from seasonal fruits.",
+    "image": "https://recipes.net/wp-content/uploads/2022/06/jars-of-preserves-1024x683.jpg",
+    "date": "2024-10-02",
+    "author":"Sophia"
+  },
+  {
+    "id": 2,
+    "title": "Healthy Vegetable Salad Recipes",
+    "description": "Enjoy fresh and healthy salads made from local vegetables.",
+    "image": "https://www.homemadeinterest.com/wp-content/uploads/2023/03/Mixed-Green-Salad_2.jpg",
+    "date": "2024-09-05",
+    "author":"Alec"
+  },
+  {
+    "id": 3,
+    "title": "Vegetarian Preserves from Vegetables",
+    "description": "Explore recipes for delicious vegetarian preserves made from vegetables.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcW302n9KRkintmbhJVVGT6hqcJmIyop1dRg&s",
+    "date": "2024-09-19",
+    "author":"Andy"
+  },
+  {
+    "id": 4,
+    "title": "Pickling Vegetables: Traditional Methods",
+    "description": "Celebrate the tradition of pickling vegetables with these simple and tasty recipes.",
+    "image": "https://assets.epicurious.com/photos/57bdb8f0cf9e9ad43de2d942/master/pass/pickled-vegetables.jpg",
+    "date": "2024-09-25",
+    "author":"Emma"
+  },
+  {
+    "id": 5,
+    "title": "Fruits in Syrup: Recipes for Winter Delights",
+    "description": "Discover unique flavors of fruits in syrup, perfect for winter days.",
+    "image": "https://www.thespruceeats.com/thmb/EiSIz349fjtwIHAuNoOY8uwb6A8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/basic-recipe-for-fresh-fruit-syrup-4108534-step-09-5bdcbf7f46e0fb0026704816.jpg",
+    "date": "2024-08-01",
+    "author":"Antony"
+  },
+  {
+    "id": 6,
+    "title": "Fruits in Syrup: Recipes for Winter Delights",
+    "description": "Discover unique flavors of fruits in syrup, perfect for winter days.",
+    "image": "https://www.thespruceeats.com/thmb/EWfabCsMTbc9skMrWZqsp93Qq3w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/basic-recipe-for-fresh-fruit-syrup-4108534-step-01-5bdcbd61c9e77c0051ba05e2.jpg",
+    "date": "2024-08-01",
+    "author":"Jo"
+  }
+]

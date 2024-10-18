@@ -28,10 +28,10 @@ const Links = () => {
          Shop
         </Link>
         <Link
-          href='/blog'
+          href='/blogs'
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         Blog
+         Blogs
         </Link>
         <Link
           href='/about-us'
