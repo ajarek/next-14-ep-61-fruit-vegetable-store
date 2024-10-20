@@ -14,7 +14,7 @@ const AboutUs = () => {
         agriculture. By partnering with nearby farms, we ensure that our fruits
         and vegetables are not only fresh but also grown with care and respect
         for the environment. Our selection includes a wide variety of seasonal
-        produce, allowing you to enjoy the best flavors throughout the year.
+        produce, allowing you to enjoy the best flavors throughout the year .
       </p>
       <p className='text-lg'>
         We prioritize organic farming practices, which means our products are
