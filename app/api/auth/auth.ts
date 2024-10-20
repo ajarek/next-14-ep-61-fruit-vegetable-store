@@ -1,10 +1,9 @@
-
 import NextAuth from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import User from '@/lib/models'
 import connectToDb from '@/lib/connectToDb'
 import bcrypt from 'bcryptjs'
-import { LoginSchema } from "@/schemas/index"
+import { LoginSchema } from '@/schemas/index'
 
 export const {
   auth,
@@ -32,12 +31,13 @@ export const {
       },
       async authorize(credentials) {
         const validatedFields = LoginSchema.safeParse(credentials)
-        if(validatedFields.success){
+        if (validatedFields.success) {
           await connectToDb()
-          const {username, password} = validatedFields.data
+          const { username, password } = validatedFields.data
           try {
             const user = await User.findOne({ username: username })
-              .lean().exec()
+              .lean()
+              .exec()
             if (user) {
               const isPasswordCorrect = await bcrypt.compare(
                 password,
@@ -50,7 +50,7 @@ export const {
                 }
               }
             }
-          }catch{
+          } catch {
             return null
           }
         }
@@ -61,13 +61,14 @@ export const {
 
   callbacks: {
     async jwt({ token, user }) {
-      if(!user){
+      if (!user) {
         return token
-      } 
+      }
       const id = user.id
-      const existingUser = await User.findById(id ?? "").lean().exec()
-      if(!existingUser) 
-        return token
+      const existingUser = await User.findById(id ?? '')
+        .lean()
+        .exec()
+      if (!existingUser) return token
 
       if (user) {
         return {
@@ -81,7 +82,7 @@ export const {
       }
       return token
     },
-    async session({ session, token }) {     
+    async session({ session, token }) {
       return {
         ...session,
         user: {

@@ -11,8 +11,6 @@ export type User = {
 
 export type UserWithoutId = Omit<User, '_id'>
 
-
-
 const userSchema = new mongoose.Schema(
   {
     username: { type: String, required: true, unique: true, min: 3, max: 20 },
@@ -24,8 +22,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 )
 
-
-
-const User = (mongoose.models?.User || mongoose.model('User', userSchema)) as mongoose.Model<User>
+const User = (mongoose.models?.User ||
+  mongoose.model('User', userSchema)) as mongoose.Model<User>
 
 export default User

@@ -1,13 +1,10 @@
 'use server'
 
 import connectToDb from './connectToDb'
-
-import User from "./models"
+import User from './models'
 import { UserWithoutId } from './models'
 import { revalidatePath } from 'next/cache'
 import bcrypt from 'bcryptjs'
-import { redirect } from 'next/navigation'
-
 
 export const addUser = async (formData: UserWithoutId) => {
   const { username, email, password, img, isAdmin } = formData
@@ -38,8 +35,9 @@ export const deleteUser = async (formData: FormData) => {
     revalidatePath('/dashboard')
     console.log({ message: `Deleted user ${id}` })
     return { message: `Deleted user ${id}` }
-  } catch (err) {
-    return { message: 'Failed to delete user' }
+  } catch (error) {
+    console.error('Error during update:', error)
+    return { message: 'Failed to update database' }
   }
 }
 
@@ -62,12 +60,9 @@ export const updateUser = async (formData: FormData) => {
       }
     )
     revalidatePath(`/dashboard`)
-
     return { message: `Updated user ${_id}` }
-  } catch (err) {
-    return { message: 'Failed to update to db' }
-  } finally {
-    redirect('/dashboard/')
+  } catch (error) {
+    console.error('Error during update:', error)
+    return { message: 'Failed to update database' }
   }
 }
-

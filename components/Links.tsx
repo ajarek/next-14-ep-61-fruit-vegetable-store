@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
-
 import { ShoppingCart } from 'lucide-react'
 import { useCartStore } from '@/store/cartStore'
 
@@ -10,43 +8,38 @@ const Links = () => {
   const { items } = useCartStore()
   return (
     <div className='max-lg:hidden w-full flex items-center justify-end   '>
-      
-
       <div className='flex items-center gap-8 mr-4 '>
         <Link
           href='/'
-         
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         Home
+          Home
         </Link>
 
         <Link
           href='/shop?search='
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         Shop
+          Shop
         </Link>
         <Link
           href='/blogs'
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         Blogs
+          Blogs
         </Link>
         <Link
           href='/about-us'
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         About Us
+          About Us
         </Link>
         <Link
           href='/contact-us'
           className={`  text-xl hover:text-primary focus:text-primary `}
         >
-         Contact Us
+          Contact Us
         </Link>
-       
-       
 
         {items.length > 0 && (
           <Link

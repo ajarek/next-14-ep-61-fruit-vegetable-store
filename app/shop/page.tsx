@@ -13,9 +13,11 @@ import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import type { Item } from '@/store/cartStore'
 import { useCartStore } from '@/store/cartStore'
-const Shop = ({searchParams}:{searchParams:{search:string}}) => {
+const Shop = ({ searchParams }: { searchParams: { search: string } }) => {
   const { addItemToCart, items } = useCartStore()
-  const [quantityPanel, setQuantityPanel] = useState<{ [key: number]: number }>({})
+  const [quantityPanel, setQuantityPanel] = useState<{ [key: number]: number }>(
+    {}
+  )
   const router = useRouter()
   const increment = (id: number) => {
     setQuantityPanel((prev) => ({
@@ -32,18 +34,20 @@ const Shop = ({searchParams}:{searchParams:{search:string}}) => {
   }
 
   const handleCart = (item: Item) => {
-     if (items.some((i) => i.id === item.id)) return
-    const newItem = { ...item}
+    if (items.some((i) => i.id === item.id)) return
+    const newItem = { ...item }
     addItemToCart(newItem)
-     router.push('/cart')
+    router.push('/cart')
     setQuantityPanel({})
   }
 
   return (
     <div className='grid xl:grid-cols-4 grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-4 px-12 pb-8'>
-      {Products
-      .filter((product) => product.name.toLowerCase().includes(searchParams.search.toLowerCase() ||  '')) 
-      .map((product) => (
+      {Products.filter((product) =>
+        product.name
+          .toLowerCase()
+          .includes(searchParams.search.toLowerCase() || '')
+      ).map((product) => (
         <Card
           key={product.id}
           className='overflow-hidden'
@@ -80,24 +84,24 @@ const Shop = ({searchParams}:{searchParams:{search:string}}) => {
               >
                 ➕
               </Button>
-            
-            <Button
-          className='self-center max-w-fit '
-          onClick={() =>
-            handleCart({
-              id: Number(product?.id) || 0,
-              name: product?.name || '',
-              price: product?.price || 0,
-              quantity: quantityPanel[product.id] || 1,
-              Image: product?.Image || '',
-              type:product?.type || '',
-            })
-          }
-          aria-label='Add to Cart'
-        >
-              Add to Cart
-            </Button>
-            </div>  
+
+              <Button
+                className='self-center max-w-fit '
+                onClick={() =>
+                  handleCart({
+                    id: Number(product?.id) || 0,
+                    name: product?.name || '',
+                    price: product?.price || 0,
+                    quantity: quantityPanel[product.id] || 1,
+                    Image: product?.Image || '',
+                    type: product?.type || '',
+                  })
+                }
+                aria-label='Add to Cart'
+              >
+                Add to Cart
+              </Button>
+            </div>
           </CardContent>
         </Card>
       ))}

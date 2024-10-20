@@ -4,15 +4,12 @@ import { redirect } from 'next/navigation'
 import { Session } from 'next-auth'
 
 const Payment = async () => {
-
   const session = await auth()
   const { user } = (session as Session) || {}
 
   if (!user) {
     redirect('/register')
   }
-
-  
 
   return (
     <>

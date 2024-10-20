@@ -1,7 +1,6 @@
-import type {Session} from 'next-auth'
+import type { Session } from 'next-auth'
 import Link from 'next/link'
 import LogoutBtn from '@/components/LogoutBtn'
-
 
 const Logout = async ({ session }: { session: Session | null }) => {
   return (

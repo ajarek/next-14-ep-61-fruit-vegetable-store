@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
 import { useCartStore } from '@/store/cartStore'
 
-const FormPayment = ({nameUser}:{nameUser:string}) => {
+const FormPayment = ({ nameUser }: { nameUser: string }) => {
   const { items, total, removeAll } = useCartStore()
   const router = useRouter()
   const { toast } = useToast()
@@ -15,8 +15,10 @@ const FormPayment = ({nameUser}:{nameUser:string}) => {
   const toastAlert = () => {
     toast({
       variant: 'default',
-      title: 'PAID '+total().toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-      description: 'Thank you '+nameUser.toUpperCase(),
+      title:
+        'PAID ' +
+        total().toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+      description: 'Thank you ' + nameUser.toUpperCase(),
     })
   }
 
@@ -40,7 +42,10 @@ const FormPayment = ({nameUser}:{nameUser:string}) => {
             <Label htmlFor='cardNumber'>To be paid</Label>
             <Input
               type='text'
-              value={total().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+              value={total().toLocaleString('en-US', {
+                style: 'currency',
+                currency: 'USD',
+              })}
               required
             />
           </div>
@@ -75,7 +80,12 @@ const FormPayment = ({nameUser}:{nameUser:string}) => {
           </div>
 
           <div className='w-full flex justify-end  mt-4'>
-            <Button type='submit' aria-label=''>I order and pay</Button>
+            <Button
+              type='submit'
+              aria-label=''
+            >
+              I order and pay
+            </Button>
           </div>
         </form>
       ) : (

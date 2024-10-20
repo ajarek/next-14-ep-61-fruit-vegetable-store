@@ -3,7 +3,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
-
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -17,9 +16,7 @@ import { Input } from '@/components/ui/input'
 import { useBlogStore } from '@/store/blogStore'
 import { useRouter } from 'next/navigation'
 
-import { useSession} from "next-auth/react"
-
-
+import { useSession } from 'next-auth/react'
 
 const FormSchema = z.object({
   title: z.string().min(2, { message: 'Title must be at least 2 characters.' }),
@@ -29,11 +26,6 @@ const FormSchema = z.object({
   image: z
     .string()
     .min(10, { message: 'Address url must be at least 10 characters.' }),
-
-  
-
-  
-
 })
 
 const today = new Date()
@@ -42,9 +34,7 @@ const todayDate = `${today.getFullYear()}-${today.getMonth() + 1}-${
 };`
 
 export function ProfileForm() {
-
-  const { data: session, status } = useSession()
-
+  const { data: session } = useSession()
 
   const { addItemToBlog, items } = useBlogStore()
   const router = useRouter()
@@ -54,11 +44,6 @@ export function ProfileForm() {
       title: '',
       description: '',
       image: '',
-
-      
-
-  
-
     },
   })
   const { resetField } = form
@@ -72,83 +57,71 @@ export function ProfileForm() {
       date: todayDate,
 
       author: session?.user?.name || '',
-
-    
-
     }
     addItemToBlog(newItem)
     router.push('/blogs')
     resetField('title')
     resetField('description')
     resetField('image')
-    
   }
-
- 
-
-
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="w-full flex flex-col space-y-8"
+        className='w-full flex flex-col space-y-8'
       >
-
-       
-
-        
         <FormField
           control={form.control}
-          name="title"
+          name='title'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Title</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="entry blog title"
+                  placeholder='entry blog title'
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="text-red-500" />
+              <FormMessage className='text-red-500' />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="description"
+          name='description'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Description</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="put a description"
+                  placeholder='put a description'
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="text-red-500" />
+              <FormMessage className='text-red-500' />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="image"
+          name='image'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Image</FormLabel>
               <FormControl>
                 <Input
-                  placeholder="put the image url"
+                  placeholder='put the image url'
                   {...field}
                 />
               </FormControl>
-              <FormMessage className="text-red-500" />
+              <FormMessage className='text-red-500' />
             </FormItem>
           )}
         />
         <Button
-          type="submit"
-          className=" w-fit self-end"
+          type='submit'
+          className=' w-fit self-end'
         >
           Submit
         </Button>

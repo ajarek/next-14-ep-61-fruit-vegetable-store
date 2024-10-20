@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {  UserWithoutId } from '@/lib/models'
+import { UserWithoutId } from '@/lib/models'
 import { addUser } from '@/lib/action'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'

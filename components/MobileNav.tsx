@@ -2,11 +2,7 @@
 
 import { Menu, ShoppingCart } from 'lucide-react'
 import Link from 'next/link'
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger
-} from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 import { useCartStore } from '@/store/cartStore'
 
@@ -21,7 +17,6 @@ const MobileNav = () => {
         side='left'
         className='border-none bg-card text-card-foreground  shadow-none lg:hidden '
       >
-     
         <div className='flex flex-col gap-4 mt-4 '>
           {items.length > 0 && (
             <Link
@@ -37,9 +32,7 @@ const MobileNav = () => {
               </div>
             </Link>
           )}
-             
-         
-        
+
           <Link
             href='/'
             className={`  text-xl hover:text-primary focus:text-primary `}

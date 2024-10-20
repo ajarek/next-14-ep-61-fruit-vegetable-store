@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
 import blogs from '@/data/blogs.json'
-type Item = {
+export type Item = {
   id: number
   title: string
   description: string
