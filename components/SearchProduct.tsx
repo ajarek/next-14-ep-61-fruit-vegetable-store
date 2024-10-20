@@ -18,6 +18,7 @@ const SearchProduct = () => {
       <Link
         href={`/shop?search=${search}`}
         className=' h-9 w-16 bg-primary flex items-center justify-center rounded-r-lg hover:bg-primary/70'
+        aria-label='Search'
       >
         <Search className='text-white' />
       </Link>

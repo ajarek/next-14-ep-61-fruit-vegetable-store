@@ -20,6 +20,7 @@ export default function Home() {
           <Link
             href={'/shop?search='}
             className='w-fit flex items-center gap-2 bg-background hover:bg-background/70 px-4 py-2 rounded-lg'
+            aria-label='Shop Now'
           >
             Shop Now <MoveRight />
           </Link>
@@ -48,6 +49,7 @@ export default function Home() {
           <Link
             href={'/shop?search='}
             className=' absolute bottom-2 right-2 text-xl border-b-2 border-white hover:border-violet-500  '
+            aria-label='Shop Now'
           >
             Shop Now
           </Link>
@@ -68,6 +70,7 @@ export default function Home() {
           <Link
             href={'/shop?search='}
             className='absolute bottom-2 right-2 text-xl border-b-2 border-white hover:border-violet-400 '
+            aria-label='Shop Now'
           >
             Shop Now
           </Link>

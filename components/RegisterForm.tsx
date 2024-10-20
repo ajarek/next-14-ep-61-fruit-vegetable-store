@@ -49,6 +49,7 @@ const RegisterForm = () => {
             width={40}
             height={40}
             className='w-full h-full object-cover  rounded-full  '
+            aria-label='Home'
           />
         </Link>
       </div>
@@ -99,6 +100,7 @@ const RegisterForm = () => {
         <Link
           href='/api/auth/signin'
           className='text-white'
+          aria-label='Login'
         >
           You already have an account? <b className='text-[#16a34a]'>Login</b>
         </Link>

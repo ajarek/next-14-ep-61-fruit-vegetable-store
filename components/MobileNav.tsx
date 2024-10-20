@@ -22,6 +22,7 @@ const MobileNav = () => {
             <Link
               href='/cart'
               className={`flex items-center  px-3 rounded-sm `}
+              aria-label='Cart' 
             >
               <ShoppingCart
                 size={24}
@@ -36,6 +37,7 @@ const MobileNav = () => {
           <Link
             href='/'
             className={`  text-xl hover:text-primary focus:text-primary `}
+            aria-label='Home'
           >
             Home
           </Link>
@@ -43,24 +45,28 @@ const MobileNav = () => {
           <Link
             href='/shop?search='
             className={`  text-xl hover:text-primary focus:text-primary `}
+            aria-label='Shop'
           >
             Shop
           </Link>
           <Link
             href='/blogs'
             className={`  text-xl hover:text-primary focus:text-primary `}
+            aria-label='Blogs'
           >
             Blogs
           </Link>
           <Link
             href='/about-us'
             className={`  text-xl hover:text-primary focus:text-primary `}
+            aria-label='About Us'
           >
             About Us
           </Link>
           <Link
             href='/contact-us'
             className={`  text-xl hover:text-primary focus:text-primary `}
+            aria-label='Contact Us'
           >
             Contact Us
           </Link>

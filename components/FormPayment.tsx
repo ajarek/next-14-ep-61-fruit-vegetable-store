@@ -82,14 +82,16 @@ const FormPayment = ({ nameUser }: { nameUser: string }) => {
           <div className='w-full flex justify-end  mt-4'>
             <Button
               type='submit'
-              aria-label=''
+              aria-label='Order and Pay'
             >
               I order and pay
             </Button>
           </div>
         </form>
       ) : (
-        <Button onClick={() => router.push('/')}>Home</Button>
+        <Button onClick={() => router.push('/')} aria-label='Home'>
+          Home
+        </Button>
       )}
     </div>
   )

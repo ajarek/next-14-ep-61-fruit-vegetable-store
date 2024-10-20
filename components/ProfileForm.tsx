@@ -122,6 +122,7 @@ export function ProfileForm() {
         <Button
           type='submit'
           className=' w-fit self-end'
+          aria-label='Submit'
         >
           Submit
         </Button>

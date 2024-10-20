@@ -38,13 +38,15 @@ const Contact = async () => {
             placeholder='Message'
             required
           />
-          <Button className=' '>Send</Button>
+          <Button className=' ' aria-label='Send'>
+            Send
+          </Button>
         </form>
         <a
           className='w-full flex items-center'
           href='tel:+48573 219 230'
         >
-          <Button className='w-full flex items-center'>
+          <Button className='w-full flex items-center' aria-label='Call'>
             <Smartphone /> 573 219 230 Call
           </Button>
         </a>

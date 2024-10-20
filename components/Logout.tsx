@@ -11,6 +11,7 @@ const Logout = async ({ session }: { session: Session | null }) => {
         <Link
           className='px-4 py-1 bg-primary  rounded-sm'
           href={'/register'}
+          aria-label='Login'
         >
           Login
         </Link>

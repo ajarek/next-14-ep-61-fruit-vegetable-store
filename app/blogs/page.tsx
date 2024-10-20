@@ -26,7 +26,7 @@ const Blogs = () => {
             key={blog.id}
             className='p-4'
           >
-            <Link href={`/blog/${blog.id}`}>
+            <Link href={`/blog/${blog.id}`} aria-label='Blog'>
               <CardHeader className=' relative w-full rounded-xl p-4  aspect-[16/9]'>
                 <Image
                   src={blog.image}

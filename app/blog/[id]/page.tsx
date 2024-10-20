@@ -38,6 +38,7 @@ const BlogId = ({ params }: { params: { id: string } }) => {
             size='icon'
             className=' self-end  '
             onClick={() => removeItemFromBlog(blog.id)}
+            aria-label='Delete'
           >
             <X className='' />
           </Button>
